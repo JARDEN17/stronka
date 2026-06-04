@@ -123,13 +123,16 @@
             text-decoration: underline;
         }
 
-        /* Dodatkowy styl dla sytuacji, gdy w jednym wierszu są dwa linki obok siebie */
+        /* Styl dla wierszy z wieloma linkami obok siebie (zapobiega ucinaniu na telefonach) */
         .file-links-group {
             display: flex;
-            text-align: center;
             align-items: center;
             gap: 16px;
             flex-grow: 1;
+            overflow-x: auto; /* Włącza pasek przewijania, gdy linki się nie mieszczą */
+            white-space: nowrap; /* Blokuje łamanie tekstu do nowej linii */
+            padding-bottom: 6px; /* Przestrzeń pod tekstem na pasek przewijania */
+            scrollbar-width: thin; /* Cienki pasek na Firefox */
         }
 
         .file-links-group a {
@@ -141,6 +144,15 @@
 
         .file-links-group a:hover {
             text-decoration: underline;
+        }
+
+        /* Wygląd paska przewijania na telefonach i Chrome/Safari */
+        .file-links-group::-webkit-scrollbar {
+            height: 4px; 
+        }
+        .file-links-group::-webkit-scrollbar-thumb {
+            background: #30363d; 
+            border-radius: 10px;
         }
 
         /* Dodatkowy opis po prawej stronie */
@@ -177,7 +189,6 @@
                         <h2>📚 Teoria</h2>
                     </div>
                     <ul class="file-list">
-                        
                         <li class="file-item">
                             <span class="file-icon">🌐</span>
                             <a href="https://allinonebyplucek.blogspot.com/p/ee08-skrot-z-teorii.html?m=1" class="file-link" target="_blank">Cała teoria - Skrót EE08/INF.02</a>
@@ -196,7 +207,6 @@
                         <h2>📝 Teoria - zadania do robienia</h2>
                     </div>
                     <ul class="file-list">
-                        
                         <li class="file-item">
                             <span class="file-icon">🌐</span>
                             <a href="https://ogarnijegzamin.pl/quiz?q=INF_02" class="file-link" target="_blank">Strona z możliwościa losowania pytnia, symulacja egzaminu ( 60 min - 40 zadań ), wszystkie pytania, przecieki pytań CKE</a>
@@ -204,7 +214,7 @@
                         </li>
                         <li class="file-item">
                             <span class="file-icon">🌐</span>
-                            <a href="https://www.kursinf.pl/pytania/inf02" class="file-link" target="_blank">Strona z możliwościa losowania pytnia, arkuszu 40 pytań i cała baza pytań ( brak przeciekow )</a>
+                            <a href="https://www.kursinf.pl/pytanya/inf02" class="file-link" target="_blank">Strona z możliwościa losowania pytnia, arkuszu 40 pytań i cała baza pytań ( brak przeciekow )</a>
                             <span class="file-meta">WWW</span>
                         </li>
                     </ul>
@@ -255,7 +265,6 @@
 
             <div class="column">
                 
-
                 <section class="category-section">
                     <div class="category-header">
                         <h2>🌐 Strony z arkuszami egzaminacyjnymi</h2>
@@ -384,26 +393,18 @@
 
                 <section class="category-section">
                     <div class="category-header">
-                        <h2>⌨️ Najważniejsze Komendy - LINUX</h2>
+                        <h2>⌨️ Diagnostyka Komendy - LINUX</h2>
                     </div>
                     <ul class="file-list">
                         <li class="file-item">
-                            <span class="file-icon">🎥</span>
-                            <a href="https://www.youtube.com/watch?v=E7n193LtT9A" class="file-link" target="_blank">NAJWAŻNIEJSZE KOMENDY - LINUX</a>
-                            <span class="file-meta">YouTube</span>
-                        </li>
-                        <li class="file-item">
-                            <span class="file-icon">📸</span>
                             <div class="file-links-group">
-                                <a href="komendy_linux1.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 1</a>
+                                <a href="komendy_linux_diagnstyka1.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 1</a>
                                 <span>|</span>
-                                <a href="komendy_linux2.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 2</a>
+                                <a href="komendy_linux_diagnstyka2.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 2</a>
                                 <span>|</span>
-                                <a href="diagnostyka_linux.pdf" target="_blank">KOMENDY LINUX 1 - gorsza jakość</a>
-                                <span>|</span>
-                                <a href="gorsza_jakosc_komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2 - gorsza jakość</a>
+                                <a href="diagnostyka_linux.pdf" target="_blank">PDF z komendami diagnstyki</a>
                             </div>
-                            <span class="file-meta">Obrazy</span>
+                            <span class="file-meta">Obrazy / PDF</span>
                         </li>
                     </ul>
                 </section>
