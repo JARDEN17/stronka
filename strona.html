@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGZAMIN INF.02</title>
+    <style>
+        /* Reset i podstawowe style w stylu GitHub Dark */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117; /* Główne ciemne tło GitHub */
+            color: #c9d1d9; /* Jasny tekst */
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* Górny pasek nawigacyjny */
+        header {
+            background-color: #161b22; /* Nieco ciemniejszy pasek górny */
+            border-bottom: 1px solid #21262d;
+            padding: 16px 32px;
+            margin-bottom: 32px;
+        }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f0f6fc;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Główny kontener strony */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Układ dwukolumnowy (Flexbox) */
+        .columns-wrapper {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* Każda z kolumn zajmuje tyle samo miejsca (50%) */
+        .column {
+            flex: 1;
+            min-width: 0; /* Zabezpieczenie przed rozjeżdżaniem się tekstu */
+        }
+
+        /* Sekcja / Panel (odpowiednik repozytorium/boksów z GitHub) */
+        .category-section {
+            background-color: #161b22;
+            border: 1px solid #30363d; /* Charakterystyczna ramka GitHub */
+            border-radius: 6px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        /* Nagłówek sekcji */
+        .category-header {
+            background-color: #21262d;
+            border-bottom: 1px solid #30363d;
+            padding: 16px;
+        }
+
+        .category-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f0f6fc;
+        }
+
+        /* Lista materiałów */
+        .file-list {
+            list-style: none;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            border-bottom: 1px solid #21262d;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Usuwamy dolną ramkę z ostatniego elementu */
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Efekt najechania myszką na wiersz */
+        .file-item:hover {
+            background-color: #1f242c;
+        }
+
+        /* Ikony przed linkami */
+        .file-icon {
+            margin-right: 12px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Linki (Jasnoniebieski kolor z GitHub Dark) */
+        .file-link {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        .file-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Dodatkowy styl dla sytuacji, gdy w jednym wierszu są dwa linki obok siebie */
+        .file-links-group {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 16px;
+            flex-grow: 1;
+        }
+
+        .file-links-group a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .file-links-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dodatkowy opis po prawej stronie */
+        .file-meta {
+            font-size: 12px;
+            color: #8b949e;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+
+        /* Responsywność: na telefonach kolumny wskoczą jedna pod drugą */
+        @media (max-width: 900px) {
+            .columns-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>💻 EGZAMIN INF.02</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="columns-wrapper">
+
+            <div class="column">
+                
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>📚 Teoria</h2>
+                    </div>
+                    <ul class="file-list">
+                        
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://allinonebyplucek.blogspot.com/p/ee08-skrot-z-teorii.html?m=1" class="file-link" target="_blank">Cała teoria - Skrót EE08/INF.02</a>
+                            <span class="file-meta">Blog</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🎓</span>
+                            <a href="https://pasja-informatyki.pl/sieci-komputerowe/" class="file-link" target="_blank">Kurs sieci komputerowych - Pasja Informatyki</a>
+                            <span class="file-meta">Kurs WWW</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>📝 Teoria - zadania do robienia</h2>
+                    </div>
+                    <ul class="file-list">
+                        
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://ogarnijegzamin.pl/quiz?q=INF_02" class="file-link" target="_blank">Strona z możliwościa losowania pytnia, symulacja egzaminu ( 60 min - 40 zadań ), wszystkie pytania, przecieki pytań CKE</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://www.kursinf.pl/pytania/inf02" class="file-link" target="_blank">Strona z możliwościa losowania pytnia, arkuszu 40 pytań i cała baza pytań ( brak przeciekow )</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>📆 Przecieki teorii dziennie</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">📄</span>
+                            <a href="https://ogarnijegzamin.pl/egzaminy?b=informatyka" class="file-link" target="_blank">Baza pytań - Kompilacja INF.02 - codziennie chyba aktualizowane</a>
+                            <span class="file-meta">PDF</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📝</span>
+                            <a href="https://capricious-stetson-da8.notion.site/Zadania-inf02-z-dnia-2-czerwca-37306e9dd2b780efbe3fd6841f3f5b6f" class="file-link" target="_blank">Zadania INF.02 z dnia 2 czerwca</a>
+                            <span class="file-meta">Notion</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📝</span>
+                            <a href="https://capricious-stetson-da8.notion.site/Zadania-inf02-z-3-czerwca-02b7baad3e6a41f69b0ff88dd5f3ea69?pvs=74" class="file-link" target="_blank">Zadania INF.02 z dnia 3 czerwca</a>
+                            <span class="file-meta">Notion</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🔢 Sieci - obliczanie, wyznaczanie IP itd.</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=g-JoyWgDi-M" class="file-link" target="_blank">Jak obliczyć liczbę hostów?</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=mCnbtFJHwOw" class="file-link" target="_blank">Jak wyznaczyć adres rozgłoszeniowy?</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <div class="column">
+                
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🌐 Strony z arkuszami egzaminacyjnymi</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://www.praktycznyegzamin.pl/ee08/praktyka/" class="file-link" target="_blank">Arkusze egzaminacyjne z każdego dnia ( kilka ) i każdej sesji</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://ogarnijegzamin.pl/praktyka?q=INF_02&b=informatyka" class="file-link" target="_blank">Arkusze egzaminacyjne - tylko jeden z danego roku</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🤖 Symulator</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🛜</span>
+                            <a href="https://ogarnijegzamin.pl/praktyczny?b=informatyka" class="file-link" target="_blank">Symulator switcha i routera ( nie ma chyba naszych )</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🖥️ Systemy do pobrania</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🌐</span>
+                            <a href="https://texturedpl.bieda.it/linux/obrazy/index.html" class="file-link" target="_blank">To jest od jakiegoś chłopa tylko że one są tak +/- niby zrobione ale nie jak na egzaminie</a>
+                            <span class="file-meta">WWW</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📟</span>
+                            <a href="" class="file-link" target="_blank">WINDOWS 10 | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
+                            <span class="file-meta">.ove</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📟</span>
+                            <a href="" class="file-link" target="_blank">WINDOWS Server 2019 | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
+                            <span class="file-meta">.ove</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📟</span>
+                            <a href="" class="file-link" target="_blank">Linux DESKTOP | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
+                            <span class="file-meta">.ove</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📟</span>
+                            <a href="" class="file-link" target="_blank">Linux Server | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
+                            <span class="file-meta">.ove</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>👤 Kanał z materiałami praktycznymi</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">📺</span>
+                            <a href="https://www.youtube.com/@MacTreIT/videos" class="file-link" target="_blank">MacTreIT - Wszystkie wideo</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>⌨️ Najważniejsze Komendy - WINDOWS</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=n43XFtJxcl4" class="file-link" target="_blank">NAJWAŻNIEJSZE KOMENDY WINDOWS</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=jhfIWQ_lHm0" class="file-link" target="_blank">Podstawowe komendy w konsoli Windows</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=-MrHzeU7Dqs" class="file-link" target="_blank">Konsola Windows: Praca przy folderach i plikach</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>⌨️ Najważniejsze Komendy - LINUX</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=E7n193LtT9A" class="file-link" target="_blank">NAJWAŻNIEJSZE KOMENDY - LINUX</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">📸</span>
+                            <div class="file-links-group">
+                                <a href="komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1</a>
+                                <span>|</span>
+                                <a href="komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2</a>
+                                <span>|</span>
+                                <a href="gorsza_jakosc_komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1 - gorsza jakość</a>
+                                <span>|</span>
+                                <a href="gorsza_jakosc_komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2 - gorsza jakość</a>
+                            </div>
+                            <span class="file-meta">Obrazy</span>
+                        </li>
+                    </ul>
+                </section>
+                
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🖥️ Windows Server</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=ZpVLOzTDKsE" class="file-link" target="_blank">Co musisz wiedzieć z WINDOWS SERVER na egzaminie?</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=ziU7oDD4Hto" class="file-link" target="_blank">Win Server - Instalacja Active Directory</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>🐧 Linux Server</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=qP3qs2enDPY" class="file-link" target="_blank">Co musisz wiedzieć z Linux Servera na egzaminie?</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                        <li class="file-item">
+                            <span class="file-icon">🔴</span>
+                            <a href="https://www.youtube.com/live/ztl8lMF4150?is=x2zF2pBHn-COP6xx" class="file-link" target="_blank">Konfiguracja SSH (Live)</a>
+                            <span class="file-meta">YouTube Live</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="category-section">
+                    <div class="category-header">
+                        <h2>⚙️ Konfiguracja Usług i Wskazówki</h2>
+                    </div>
+                    <ul class="file-list">
+                        <li class="file-item">
+                            <span class="file-icon">🎥</span>
+                            <a href="https://www.youtube.com/watch?v=103GTbNRRrs" class="file-link" target="_blank">Wskazówki do egzaminu EE08/INF.02</a>
+                            <span class="file-meta">YouTube</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
