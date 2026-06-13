@@ -79,30 +79,6 @@
             color: #f0f6fc;
         }
 
-        /* WYRÓŻNIONY NAGŁÓWEK DLA ARKUSZY (INF.02-01 itd.) */
-        .sheet-sub-header {
-            background: linear-gradient(90deg, rgba(56, 139, 253, 0.15) 0%, rgba(22, 27, 34, 0) 100%);
-            padding: 10px 16px;
-            border-bottom: 1px solid #30363d;
-            border-top: 1px solid #30363d;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .sheet-sub-header h3 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #58a6ff; /* Kolor wyróżniający błękitny */
-            font-weight: 600;
-        }
-
-        /* Pierwszy sub-header w sekcji nie potrzebuje górnej ramki */
-        .category-header + .sheet-sub-header {
-            border-top: none;
-        }
-
         /* Lista materiałów */
         .file-list {
             list-style: none;
@@ -156,10 +132,7 @@
             overflow-x: auto; /* Włącza pasek przewijania, gdy linki się nie mieszczą */
             white-space: nowrap; /* Blokuje łamanie tekstu do nowej linii */
             padding-bottom: 6px; /* Przestrzeń pod tekstem na pasek przewijania */
-            
-            /* Nowoczesne wsparcie dla nowych przeglądarek (np. Firefox) */
-            scrollbar-width: thin;
-            scrollbar-color: #30363d #161b22; 
+            scrollbar-width: thin; /* Cienki pasek na Firefox */
         }
 
         .file-links-group a {
@@ -173,27 +146,13 @@
             text-decoration: underline;
         }
 
-        /* Wygląd paska przewijania na telefonach oraz w przeglądarkach Chrome/Safari/Edge */
+        /* Wygląd paska przewijania na telefonach i Chrome/Safari */
         .file-links-group::-webkit-scrollbar {
-            height: 6px; /* Delikatnie zwiększona grubość z 4px na 6px dla lepszej widoczności i wygody */
+            height: 4px; 
         }
-        
-        /* Tło paska przewijania – dopasowane idealnie do tła wiersza sekcji (czarne/ciemne) */
-        .file-links-group::-webkit-scrollbar-track {
-            background: #161b22; 
-            border-radius: 10px;
-        }
-        
-        /* Wygląd ruchomego suwaka – ciemnoszary kolor obramowań GitHub Dark */
         .file-links-group::-webkit-scrollbar-thumb {
             background: #30363d; 
             border-radius: 10px;
-            border: 1px solid #161b22; /* Margines wokół suwaka zapobiegający zlewaniu się */
-        }
-
-        /* Stan po najechaniu myszką na suwak – rozjaśnienie dla lepszej interakcji */
-        .file-links-group::-webkit-scrollbar-thumb:hover {
-            background: #8b949e; 
         }
 
         /* Dodatkowy opis po prawej stronie */
@@ -421,7 +380,7 @@
                     <ul class="file-list">
                         <li class="file-item">
                             <span class="file-icon">📄</span>
-                            <a href="rozpiska_godzinowa.png" class="file-link" target="_blank">Rozpiska</a>
+                            <a href="rozpiska.png" class="file-link" target="_blank">Rozpiska</a>
                             <span class="file-meta">PNG</span>
                         </li>
                     </ul>
@@ -450,44 +409,34 @@
                         <h2>📄 Arkusze z tego roku</h2>
                     </div>
 
-                    <div class="sheet-sub-header">
-                        <span>📋</span>
-                        <h3>Arkusz INF.02-01</h3>
+                    <div class="category-header">
+                        <h2 style="text-align: center;">Arkusz INF.02-01</h2>
                     </div>
                     <ul class="file-list">
                         <li class="file-item">
                             <span class="file-icon">📸</span>
                             <div class="file-links-group">
-                                <a href="ARKUSZE_TEN_ROK/01/inf02_2026_cze_a1.pdf" target="_blank">INF.02-01 - wszystko w jednym</a>
+                                <a href="ARKUSZE_TEN_ROK/12.06cz1.jpg" target="_blank">12.06 cz.1 ark.1</a>
                                 <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/01/ARKUSZ-INF.02-01-cz.1.jpg" target="_blank">INF.02-01 cz.1</a>
-                                <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/01/ARKUSZ-INF.02-01-cz.2.jpg" target="_blank">INF.02-01 cz.1</a>
+                                <a href="ARKUSZE_TEN_ROK/12.06cz2.jpg" target="_blank">12.06 cz.2 ark.1</a>
                                 <span>|</span>
                                 <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:c3dff909-f211-44cf-864a-cd51013d1a8f?viewer%21megaVerb=group-discover" target="_blank">Wymagania Egzaminatora 12.06 ark.1</a>
                             </div>
                             <span class="file-meta">Obrazy</span>
                         </li>
                     </ul>
-                    </ul>
-
-                    <div class="sheet-sub-header">
-                        <span>📋</span>
-                        <h3>Arkusz INF.02-02</h3>
+                    <div class="category-header">
+                        <h2 style="text-align: center;">Arkusz INF.02-02</h2>
                     </div>
                     <ul class="file-list">
                         <li class="file-item">
                             <span class="file-icon">📸</span>
                             <div class="file-links-group">
-                                <a href="ARKUSZE_TEN_ROK/02/inf02_2026_cze_a2.pdf" target="_blank">INF.02-02 - wszystko w jednym</a>
+                                <a href="" target="_blank">N/A</a>
                                 <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/02/ARKUSZ-INF.02-02-cz.1.jpg" target="_blank">INF.02-02 cz.1</a>
+                                <a href="" target="_blank">N/A</a>
                                 <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/02/ARKUSZ-INF.02-02-cz.2.jpg" target="_blank">INF.02-02 cz.2</a>
-                                <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/02/ARKUSZ-INF.02-02-cz.3.jpg" target="_blank">INF.02-02 cz.3</a>
-                                <span>|</span>
-                                <a href="ARKUSZE_TEN_ROK/02/ARKUSZ-INF.02-02-cz.4.jpg" target="_blank">INF.02-02 cz.4</a>
+                                <a href="" target="_blank">N/A</a>
                             </div>
                             <span class="file-meta">Obrazy</span>
                         </li>
@@ -519,7 +468,7 @@
                         </li>
                         <li class="file-item">
                             <span class="file-icon">📟</span>
-                            <a href="SYSTEMY_OVA/WINDOWS-10-EGZAMIN.ova" class="file-link" target="_blank">WINDOWS 10 | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
+                            <a href="WINDOWS-10-EGZAMIN.ova" class="file-link" target="_blank">WINDOWS 10 | Skonfigurowany przeze mnie ( nie wiem czy dobrze ) </a>
                             <span class="file-meta">.ove</span>
                         </li>
                         <li class="file-item">
@@ -583,7 +532,7 @@
                     <ul class="file-list">
                         <li class="file-item">
                             <span class="file-icon">🎥</span>
-                            <a href="KOMENDY_LINUX/sciaga_Ubuntu_adminstrator.pdf" class="file-link" target="_blank">PDF Z PRAKTYCZNIE WSZYSZTKIMI NAJWAŻNIEJSZYMI KOMENDAMI</a>
+                            <a href="sciaga_Ubuntu_administrator.pdf" class="file-link" target="_blank">PDF Z PRAKTYCZNIE WSZYSZTKIMI NAJWAŻNIEJSZYMI KOMENDAMI</a>
                             <span class="file-meta">YouTube</span>
                         </li>
                         <li class="file-item">
@@ -594,22 +543,15 @@
                         <li class="file-item">
                             <span class="file-icon">📸</span>
                             <div class="file-links-group">
-                                <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1</a>
+                                <a href="komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1</a>
                                 <span>|</span>
-                                <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2</a>
+                                <a href="komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2</a>
                                 <span>|</span>
-                                <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/gorsza_jakosc_komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1 - gorsza jakość</a>
+                                <a href="gorsza_jakosc_komendy_linux1.jpg" target="_blank">KOMENDY LINUX 1 - gorsza jakość</a>
                                 <span>|</span>
-                                <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/gorsza_jakosc_komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2 - gorsza jakość</a>
+                                <a href="gorsza_jakosc_komendy_linux2.jpg" target="_blank">KOMENDY LINUX 2 - gorsza jakość</a>
                             </div>
                             <span class="file-meta">Obrazy</span>
-                        </li>
-                        <li class="file-item">
-                            <span class="file-icon">📑</span>
-                            <div class="file-links-group">
-                                <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/linux_polecenia.pdf" target="_blank">To co z góry w zdjeicach ale w pdf - lepasz jakosc</a>
-                            </div>
-                            <span class="file-meta">PDF</span>
                         </li>
                         <li class="file-item">
                             <span class="file-icon">🎥</span>
@@ -627,25 +569,20 @@
                     </div>
                     <ul class="file-list">
                         <li class="file-item">
-                            <span class="file-icon">📑</span>
                             <div class="file-links-group">
-                                <a href="DIAGNOSTYKA_LINUX/diagnostyka_linux.pdf" target="_blank">PDF z komendami diagnstyki</a>
+                                <a href="komendy_linux_diagnstyka1.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 1</a>
+                                <span>|</span>
+                                <a href="komendy_linux_diagnstyka2.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX 2</a>
+                                <span>|</span>
+                                <a href="diagnostyka_linux.pdf" target="_blank">PDF z komendami diagnstyki</a>
                             </div>
-                            <span class="file-meta">PDF</span>
+                            <span class="file-meta">Obrazy / PDF</span>
                         </li>
                         <li class="file-item">
-                            <span class="file-icon">📑</span>
                             <div class="file-links-group">
-                                <a href="DIAGNOSTYKA_LINUX/diagonstyka_linux_antonik.pdf" target="_blank">KOMENDY DIAGNOSTYKA LINUX ANTONIK</a>
+                                <a href="diagonstyka_linux_antonik.pdf" target="_blank">KOMENDY DIAGNOSTYKA LINUX ANTONIK</a>
                             </div>
-                            <span class="file-meta">PDF</span>
-                        </li>
-                        <li class="file-item">
-                            <span class="file-icon">📸</span>
-                            <div class="file-links-group">
-                                <a href="DIAGNOSTYKA_LINUX/diagnostyka_klinux.jpg" target="_blank">KOMENDY DIAGNOSTYKA LINUX - od jakiegos goscia</a>
-                            </div>
-                            <span class="file-meta">JPG</span>
+                            <span class="file-meta">Obrazy / PDF</span>
                         </li>
                         <li class="file-item">
                             <span class="file-icon">🎥</span>
