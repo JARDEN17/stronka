@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGZAMIN INF.02</title>
     <style>
-        /* Reset i podstawowe style w stylu GitHub Dark */
+       
         * {
             margin: 0;
             padding: 0;
@@ -14,15 +14,15 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0d1117; /* Główne ciemne tło GitHub */
-            color: #c9d1d9; /* Jasny tekst */
+            background-color: #0d1117; 
+            color: #c9d1d9;
             line-height: 1.5;
             padding-bottom: 60px;
         }
 
-        /* Górny pasek nawigacyjny */
+      
         header {
-            background-color: #161b22; /* Nieco ciemniejszy pasek górny */
+            background-color: #161b22;
             border-bottom: 1px solid #21262d;
             padding: 16px 32px;
             margin-bottom: 32px;
@@ -38,35 +38,35 @@
             gap: 10px;
         }
 
-        /* Główny kontener strony */
+   
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 16px;
         }
 
-        /* Układ dwukolumnowy (Flexbox) */
+    
         .columns-wrapper {
             display: flex;
             gap: 24px;
         }
 
-        /* Każda z kolumn zajmuje tyle samo miejsca (50%) */
+        
         .column {
             flex: 1;
-            min-width: 0; /* Zabezpieczenie przed rozjeżdżaniem się tekstu */
+            min-width: 0; 
         }
 
-        /* Sekcja / Panel (odpowiednik repozytorium/boksów z GitHub) */
+       
         .category-section {
             background-color: #161b22;
-            border: 1px solid #30363d; /* Charakterystyczna ramka GitHub */
+            border: 1px solid #30363d; 
             border-radius: 6px;
             margin-bottom: 24px;
             overflow: hidden;
         }
 
-        /* Nagłówek sekcji */
+
         .category-header {
             background-color: #21262d;
             border-bottom: 1px solid #30363d;
@@ -79,7 +79,6 @@
             color: #f0f6fc;
         }
 
-        /* WYRÓŻNIONY NAGŁÓWEK DLA ARKUSZY (INF.02-01 itd.) */
         .sheet-sub-header {
             background: linear-gradient(90deg, rgba(56, 139, 253, 0.15) 0%, rgba(22, 27, 34, 0) 100%);
             padding: 10px 16px;
@@ -94,16 +93,16 @@
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #58a6ff; /* Kolor wyróżniający błękitny */
+            color: #58a6ff;
             font-weight: 600;
         }
 
-        /* Pierwszy sub-header w sekcji nie potrzebuje górnej ramki */
+        
         .category-header + .sheet-sub-header {
             border-top: none;
         }
 
-        /* Lista materiałów */
+       
         .file-list {
             list-style: none;
         }
@@ -116,17 +115,15 @@
             transition: background-color 0.2s ease;
         }
 
-        /* Usuwamy dolną ramkę z ostatniego elementu */
         .file-item:last-child {
             border-bottom: none;
         }
 
-        /* Efekt najechania myszką na wiersz */
         .file-item:hover {
             background-color: #1f242c;
         }
 
-        /* Ikony przed linkami */
+   
         .file-icon {
             margin-right: 12px;
             font-size: 16px;
@@ -134,7 +131,6 @@
             align-items: center;
         }
 
-        /* Linki (Jasnoniebieski kolor z GitHub Dark) */
         .file-link {
             color: #58a6ff;
             text-decoration: none;
@@ -147,17 +143,15 @@
             text-decoration: underline;
         }
 
-        /* Styl dla wierszy z wieloma linkami obok siebie (zapobiega ucinaniu na telefonach) */
         .file-links-group {
             display: flex;
             align-items: center;
             gap: 16px;
             flex-grow: 1;
-            overflow-x: auto; /* Włącza pasek przewijania, gdy linki się nie mieszczą */
-            white-space: nowrap; /* Blokuje łamanie tekstu do nowej linii */
-            padding-bottom: 6px; /* Przestrzeń pod tekstem na pasek przewijania */
+            overflow-x: auto; 
+            white-space: nowrap; 
+            padding-bottom: 6px; 
             
-            /* Nowoczesne wsparcie dla nowych przeglądarek (np. Firefox) */
             scrollbar-width: thin;
             scrollbar-color: #30363d #161b22; 
         }
@@ -173,30 +167,30 @@
             text-decoration: underline;
         }
 
-        /* Wygląd paska przewijania na telefonach oraz w przeglądarkach Chrome/Safari/Edge */
+      
         .file-links-group::-webkit-scrollbar {
-            height: 6px; /* Delikatnie zwiększona grubość z 4px na 6px dla lepszej widoczności i wygody */
+            height: 6px; 
         }
         
-        /* Tło paska przewijania – dopasowane idealnie do tła wiersza sekcji (czarne/ciemne) */
+       
         .file-links-group::-webkit-scrollbar-track {
             background: #161b22; 
             border-radius: 10px;
         }
         
-        /* Wygląd ruchomego suwaka – ciemnoszary kolor obramowań GitHub Dark */
+       
         .file-links-group::-webkit-scrollbar-thumb {
             background: #30363d; 
             border-radius: 10px;
-            border: 1px solid #161b22; /* Margines wokół suwaka zapobiegający zlewaniu się */
+            border: 1px solid #161b22;
         }
 
-        /* Stan po najechaniu myszką na suwak – rozjaśnienie dla lepszej interakcji */
+       
         .file-links-group::-webkit-scrollbar-thumb:hover {
             background: #8b949e; 
         }
 
-        /* Dodatkowy opis po prawej stronie */
+
         .file-meta {
             font-size: 12px;
             color: #8b949e;
@@ -204,7 +198,6 @@
             white-space: nowrap;
         }
 
-        /* Responsywność: na telefonach kolumny wskoczą jedna pod drugą */
         @media (max-width: 900px) {
             .columns-wrapper {
                 flex-direction: column;
@@ -593,7 +586,7 @@
                     <ul class="file-list">
                         <li class="file-item">
                             <span class="file-icon">📑</span>
-                            <a href="KOMENDY_LINUX/sciaga_Ubuntu_adminstrator.pdf" class="file-link" target="_blank">PDF Z PRAKTYCZNIE WSZYSZTKIMI NAJWAŻNIEJSZYMI KOMENDAMI</a>
+                            <a href="NAJWAZNIEJSZE_KOMENDY_LINUX/sciaga.pdf" class="file-link" target="_blank">PDF Z PRAKTYCZNIE WSZYSZTKIMI NAJWAŻNIEJSZYMI KOMENDAMI</a>
                             <span class="file-meta">PDF</span>
                         </li>
                         <li class="file-item">
